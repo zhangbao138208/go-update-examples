@@ -1,0 +1,9 @@
+new_version = "111"
+ echo $new_version;
+for var in `git tag`; 
+do 
+    $new_version$var; 
+    echo $new_version;
+done
+
+echo $newest_version
