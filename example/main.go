@@ -17,9 +17,12 @@ import (
 )
 
 func restart() {
-	s := []string{"cmd.exe", "/C", "start", `restart.exe`}
+	// s := []string{"cmd.exe", "/C", "start", `restart.exe`}
 
-	cmd := exec.Command(s[0], s[1:]...)
+	// cmd := exec.Command(s[0], s[1:]...)
+	s := []string{"restart.exe"}
+
+	cmd := exec.Command(s[0])
 	if err := cmd.Run(); err != nil {
 		fmt.Println("Error:", err)
 	}
